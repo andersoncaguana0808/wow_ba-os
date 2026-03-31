@@ -496,4 +496,34 @@ html {
   box-shadow: 0 10px 20px rgba(0,0,0,0.2) !important;
   border-color: #FFF !important;
 }
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow-x: hidden; 
+}
+img {
+    max-width: 100%; 
+    height: auto;    
+    display: block;
+    margin: auto;
+}
+@media (max-width: 768px) {
+    .grid-basica {
+        display: block !important; 
+        width: 100% !important;
+    }
+    nav {
+        width: 100% !important;
+    }
+    nav ul {
+        display: block; 
+        text-align: center;
+        padding: 0;
+    }
+    nav ul li {
+        display: block; 
+        margin: 10px 0;
+    }
+}
 </style>
