@@ -508,22 +508,43 @@ img {
     display: block;
     margin: auto;
 }
+/* --- NUEVO AJUSTE PARA CELULAR --- */
 @media (max-width: 768px) {
-    .grid-basica {
-        display: block !important; 
-        width: 100% !important;
-    }
-    nav {
-        width: 100% !important;
-    }
+
+    /* Esto hace que el menú no sea tan gigante */
     nav ul {
-        display: block; 
-        text-align: center;
-        padding: 0;
+        display: flex !important;
+        flex-wrap: wrap !important; /* Permite que los botones se acomoden solitos */
+        justify-content: center !important;
+        padding: 10px 0 !important;
     }
+
     nav ul li {
-        display: block; 
-        margin: 10px 0;
+        display: inline-block !important;
+        margin: 5px !important;
+        width: auto !important; /* Que cada botón use solo lo que necesita */
+    }
+
+    nav ul li a {
+        font-size: 13px !important; /* Letra más fina para que no choque */
+        padding: 5px 10px !important;
+        white-space: nowrap !important;
+    }
+
+    /* Arregla las cajas de texto blancas que se cortan en tu video */
+    .contenedor, .seccion, div[style*="background-color:white"] { 
+        width: 90% !important;
+        margin: 15px auto !important;
+        float: none !important; /* Quita el empuje lateral */
+        display: block !important;
+    }
+
+    /* Para que el título "BIENVENIDO A BAÑOS" no se salga de la pantalla */
+    h1 {
+        font-size: 22px !important;
+        text-align: center !important;
+        width: 100% !important;
     }
 }
+
 </style>
