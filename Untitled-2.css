@@ -509,24 +509,6 @@ img {
     margin: auto;
 }
 }
-@media (max-width: 768px) {
-    .grid-basica {
-        display: block !important; 
-        width: 100% !important;
-    }
-    nav {
-        width: 100% !important;
-    }
-    nav ul {
-        display: block; 
-        text-align: center;
-        padding: 0;
-    }
-    nav ul li {
-        display: block; 
-        margin: 10px 0;
-    }
-}
 /* Este código solo afecta a celulares */
 @media (max-width: 768px) {
     h1 {
