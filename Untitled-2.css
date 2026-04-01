@@ -509,63 +509,64 @@ img {
     margin: auto;
 }
 @media (max-width: 768px) {
+    /* 1. EL MENÚ: Mantenemos tu diseño vertical pero ajustamos el espacio */
+    nav {
+        width: 100% !important;
+        background-color: black; /* Asegura que el fondo negro cubra todo */
+        padding: 20px 0 !important;
+    }
 
-    /* --- TU MENÚ ORIGINAL (SIN CAMBIOS) --- */
     nav ul {
-        display: block; 
-        text-align: center;
-        padding: 0;
+        display: flex !important;
+        flex-direction: column !important; /* Mantiene el orden vertical */
+        align-items: center !important;    /* Centra el texto */
+        padding: 0 !important;
+        margin: 0 !important;
     }
+
     nav ul li {
-        display: block; 
-        margin: 10px 0;
+        width: 100% !important;
+        margin: 8px 0 !important;
     }
+
     nav ul li a {
-        font-size: 18px; /* El tamaño que tenías */
+        font-size: 16px !important; /* Un poco más pequeño para que no se salga */
         display: block;
+        color: white;
+        text-decoration: none;
     }
 
-    /* --- LOS ARREGLOS QUE PEDISTE --- */
+    /* 2. EL LOGO: Lo achicamos para que no empuje el texto */
+    nav img, .logo {
+        width: 120px !important; /* Ajusta este tamaño según tu gusto */
+        height: auto !important;
+        margin-bottom: 15px !important;
+    }
 
-    /* 1. Cuadros blancos (Aventura y Salud) - Ahora se ven bien y anchos */
-    .contenedor-aventura, .seccion-salud, div[style*="background-color:white"], .caja-blanca { 
-        width: 90% !important; 
+    /* 3. LAS CAJAS BLANCAS Y TABLAS (Lo que se ve feo en Baños) */
+    /* Esto obliga a que las columnas flacas se vuelvan anchas */
+    table, td, .contenedor, .caja-blanca, div[style*="background-color: white"] {
         display: block !important;
-        margin: 20px auto !important; /* Centrados y con espacio */
-        padding: 20px !important;
+        width: 90% !important; 
+        margin: 15px auto !important;
+        padding: 15px !important;
         float: none !important;
         box-sizing: border-box !important;
     }
 
-    /* 2. Fotos que no peguen a los filos y se vean completas */
+    /* 4. IMÁGENES Y TÍTULOS */
     img {
-        max-width: 85% !important; /* Margen a los lados */
+        max-width: 90% !important;
         height: auto !important;
-        margin: 20px auto !important;
         display: block !important;
+        margin: 15px auto !important;
     }
 
-    /* 3. Párrafos bonitos (Atractivos y Servicios) */
-    p {
-        font-size: 16px !important;
-        line-height: 1.5 !important;
-        text-align: justify !important;
-        padding: 0 20px !important; /* Para que el texto no toque el borde del cel */
-    }
-
-    /* 4. Títulos (Arregla la "N" cortada de Información Práctica) */
     h1, h2 {
-        font-size: 24px !important;
-        word-wrap: break-word !important;
+        font-size: 20px !important;
         padding: 0 10px !important;
         text-align: center !important;
-    }
-
-    /* 5. Servicios (Imagen arriba, texto abajo bien formado) */
-    .fila-servicio {
-        display: flex !important;
-        flex-direction: column !important;
-        align-items: center !important;
+        word-wrap: break-word !important;
     }
 }
 
