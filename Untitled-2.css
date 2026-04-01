@@ -305,8 +305,8 @@ border-radius:10px;
 }
 .bienvenida {
   position: absolute;
-  top: 373px;
-  left: 543px;
+  top: 50%;
+  left: 50%;
   transform: translate(-50%, -50%);
   z-index: 100;
   text-align: center;
@@ -496,5 +496,72 @@ html {
   box-shadow: 0 10px 20px rgba(0,0,0,0.2) !important;
   border-color: #FFF !important;
 }
-
+@media (max-width: 768px) {
+    html, body {
+        overflow-x: hidden !important;
+        width: 100% !important;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+    nav {
+        display: flex !important;
+        flex-direction: row !important; 
+        justify-content: space-between !important;
+        align-items: center !important;
+        background-color: black !important;
+        padding: 10px 15px !important;
+        width: 95% !important;
+        margin: 10px auto !important;
+        border-radius: 15px !important;
+        box-sizing: border-box !important;
+    }
+    nav img {
+        width: 70px !important;
+        height: auto !important;
+    }
+    nav ul {
+        display: block !important;
+        text-align: right !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        list-style: none !important;
+    }
+    nav ul li {
+        margin: 2px 0 !important;
+    }
+    nav ul li a {
+        color: white !important;
+        font-size: 11px !important;
+        text-decoration: none !important;
+        white-space: nowrap !important;
+    }
+    h1 {
+        font-size: 18px !important;
+        white-space: nowrap !important;
+        text-align: center !important;
+        width: 100% !important;
+        display: block !important;
+        margin: 15px 0 !important;
+        text-transform: uppercase;
+    }
+    img {
+        max-width: 100% !important;
+        height: auto !important;
+        display: block !important;
+        margin: auto !important;
+    }
+    p, h2, h3, .texto-informativo {
+        font-size: 16px !important; 
+        line-height: 1.5 !important; 
+        text-align: center !important;
+        padding: 0 15px !important;
+        width: 100% !important;
+        box-sizing: border-box !important;
+        overflow-wrap: break-word !important; 
+    }
+    h2 {
+        font-size: 20px !important;
+        margin-top: 25px !important;
+    }
+}
 </style>
