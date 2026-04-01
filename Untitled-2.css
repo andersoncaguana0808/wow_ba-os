@@ -496,6 +496,7 @@ html {
   box-shadow: 0 10px 20px rgba(0,0,0,0.2) !important;
   border-color: #FFF !important;
 }
+}
 /* 1. REGLAS GENERALES (Para PC y Celular) */
 html, body {
     margin: 0;
@@ -506,6 +507,7 @@ html, body {
 img {
     max-width: 100%;    
     margin: auto;
+}
 }
 @media (max-width: 768px) {
     .grid-basica {
@@ -523,6 +525,17 @@ img {
     nav ul li {
         display: block; 
         margin: 10px 0;
+    }
+}
+/* Este código solo afecta a celulares */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 24px !important; /* Tamaño pequeño para que quepa */
+        white-space: nowrap !important; /* Obliga a que salga en una sola línea recta */
+        text-align: center !important;
+        display: block !important;
+        width: 100% !important;
+        margin: 10px 0 !important;
     }
 }
 </style>
