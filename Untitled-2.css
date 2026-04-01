@@ -498,60 +498,82 @@ html {
 }
 }
 /* 1. REGLAS GENERALES (Para PC y Celular) */
-.html, body {
+html, body {
     margin: 0;
     padding: 0;
     width: 100%;
     overflow-x: hidden; 
 }
-.img {
+img {
     max-width: 100%;    
     margin: auto;
 }
-}
 @media (max-width: 768px) {
-    /* 1. Bloqueamos el deslizamiento lateral para que la pantalla quede FIJA */
+    /* 1. PANTALLA FIJA: Evita el deslizamiento lateral feo */
     html, body {
         overflow-x: hidden !important;
         width: 100% !important;
-        position: relative !important;
+        margin: 0 !important;
+        padding: 0 !important;
     }
 
-    /* 2. Tu menú: lo dejamos como te gusta pero asegurando que no empuje la pantalla */
+    /* 2. EL CONTENEDOR NEGRO (NAV): Logo a la izquierda, Menú a la derecha */
     nav {
+        display: flex !important;
+        flex-direction: row !important; /* Pone los elementos en línea */
+        justify-content: space-between !important; /* Logo al extremo izquierdo, menú al derecho */
+        align-items: center !important;
+        background-color: black !important;
+        padding: 15px !important;
         width: 100% !important;
         box-sizing: border-box !important;
+        border-radius: 20px; /* Bordes redondeados como en tu foto */
+        margin: 10px 0 !important;
     }
 
+    /* Tamaño del logo dentro del menú */
+    nav img {
+        width: 90px !important; 
+        height: auto !important;
+    }
+
+    /* La lista de botones a la derecha */
     nav ul {
-        display: block; 
-        text-align: center;
-        padding: 0;
-        margin: 0;
+        display: block !important;
+        text-align: right !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        list-style: none !important;
     }
 
     nav ul li {
-        display: block; 
-        margin: 10px 0;
+        margin: 4px 0 !important; /* Espacio pequeño entre palabras */
     }
 
-    /* 3. El texto: Lo achicamos para que salga RECTO y no estire la pantalla */
+    nav ul li a {
+        color: white !important;
+        text-decoration: none !important;
+        font-size: 13px !important; /* Tamaño justo para que no desborde */
+        white-space: nowrap !important;
+    }
+
+    /* 3. EL TEXTO "BIENVENIDO A": Recto y centrado */
     h1 {
-        font-size: 24px !important; /* Ajustado para que quepa en cualquier cel */
-        white-space: nowrap !important; /* Obliga a que sea una sola línea recta */
+        font-size: 20px !important;
+        white-space: nowrap !important;
         text-align: center !important;
         width: 100% !important;
         display: block !important;
         margin: 20px 0 !important;
-        box-sizing: border-box !important;
+        color: #333; /* O el color que prefieras */
     }
 
-    /* 4. Las imágenes: No les ponemos ancho fijo para que NO se estiren */
+    /* 4. LA IMAGEN PRINCIPAL: Que no se estire */
     img {
         max-width: 100% !important;
-        height: auto !important; /* Esto evita que se vean "estiradas" */
+        height: auto !important;
         display: block !important;
-        margin: auto !important;
+        margin: 0 auto !important;
     }
 }
 </style>
