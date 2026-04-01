@@ -508,42 +508,61 @@ img {
     display: block;
     margin: auto;
 }
-/* --- NUEVO AJUSTE PARA CELULAR --- */
 @media (max-width: 768px) {
 
-    /* Esto hace que el menú no sea tan gigante */
-    nav ul {
+    /* 1. ARREGLO DE CUADROS BLANCOS (Aventura y Salud) */
+    /* En lugar de ser columnas flacas, ahora ocuparán el ancho total una bajo otra */
+    .contenedor-aventura, .seccion-salud, div[style*="background-color:white"], .caja-blanca { 
+        width: 92% !important; /* No toca los filos del celular */
+        display: block !important;
+        margin: 15px auto !important;
+        padding: 20px !important;
+        float: none !important;
+        box-sizing: border-box !important;
+        border-radius: 15px; /* Bordes suaves para que se vea más moderno */
+    }
+
+    /* 2. ARREGLO DE IMÁGENES CORTADAS Y LARGAS */
+    /* Esto hará que las fotos se vean completas y con espacio a los lados */
+    img {
+        max-width: 90% !important; /* Espacio para que no peguen al filo */
+        height: auto !important; /* Evita que se estiren feo */
+        margin: 15px auto !important;
+        display: block !important;
+        border-radius: 8px;
+    }
+
+    /* 3. ARREGLO DE TEXTOS LARGOS (Párrafos bonitos) */
+    p, .texto-descripcion {
+        font-size: 16px !important;
+        line-height: 1.6 !important; /* Más espacio entre líneas para que no canse la vista */
+        text-align: justify !important; /* Se ve más ordenado como párrafo */
+        padding: 0 15px !important;
+    }
+
+    /* 4. ARREGLO DE "INFORMACIÓN PRÁCTICA" (Letra N cortada) */
+    h1, h2 {
+        font-size: 22px !important;
+        word-wrap: break-word !important; /* Si la palabra es muy larga, la baja */
+        padding: 0 10px !important;
+        text-align: center !important;
+    }
+
+    /* 5. ARREGLO DE "SERVICIOS" (Imagen pequeña al lado del texto) */
+    /* Esto obliga a que la imagen se ponga ARRIBA y el texto ABAJO, bien centrado */
+    .fila-servicio, .contenedor-flex {
         display: flex !important;
-        flex-wrap: wrap !important; /* Permite que los botones se acomoden solitos */
-        justify-content: center !important;
+        flex-direction: column !important;
+        align-items: center !important;
+    }
+
+    /* 6. EL MENÚ (Para que no se vea tan amontonado) */
+    nav ul {
         padding: 10px 0 !important;
     }
-
-    nav ul li {
-        display: inline-block !important;
-        margin: 5px !important;
-        width: auto !important; /* Que cada botón use solo lo que necesita */
-    }
-
     nav ul li a {
-        font-size: 13px !important; /* Letra más fina para que no choque */
-        padding: 5px 10px !important;
-        white-space: nowrap !important;
-    }
-
-    /* Arregla las cajas de texto blancas que se cortan en tu video */
-    .contenedor, .seccion, div[style*="background-color:white"] { 
-        width: 90% !important;
-        margin: 15px auto !important;
-        float: none !important; /* Quita el empuje lateral */
-        display: block !important;
-    }
-
-    /* Para que el título "BIENVENIDO A BAÑOS" no se salga de la pantalla */
-    h1 {
-        font-size: 22px !important;
-        text-align: center !important;
-        width: 100% !important;
+        font-size: 15px !important;
+        padding: 10px !important;
     }
 }
 
