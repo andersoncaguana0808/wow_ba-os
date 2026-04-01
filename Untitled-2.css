@@ -573,5 +573,21 @@ img {
         display: block !important;
         margin: auto !important;
     }
+	/* Esto arregla los párrafos y textos para que se lean claritos */
+    p, h2, h3, .texto-informativo {
+        font-size: 16px !important; /* Tamaño cómodo para leer */
+        line-height: 1.5 !important; /* Espacio entre líneas para que no se vea amontonado */
+        text-align: center !important;
+        padding: 0 15px !important; /* Esto crea un espacio a los lados para que no choque con el borde */
+        width: 100% !important;
+        box-sizing: border-box !important;
+        overflow-wrap: break-word !important; /* Si hay una palabra muy larga, la rompe para que no se esconda */
+    }
+
+    /* Si tienes títulos azules como el de la foto, esto los ajusta */
+    h2 {
+        font-size: 20px !important;
+        margin-top: 25px !important;
+    }
 }
 </style>
