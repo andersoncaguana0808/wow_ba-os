@@ -497,7 +497,14 @@ html {
   border-color: #FFF !important;
 }
 /* 1. REGLAS GENERALES (Para PC y Celular) */
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow-x: hidden; 
+}
 
+}
 @media (max-width: 768px) {
     .grid-basica {
         display: block !important; 
