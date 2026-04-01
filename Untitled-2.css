@@ -510,59 +510,62 @@ img {
 }
 @media (max-width: 768px) {
 
-    /* 1. ARREGLO DE CUADROS BLANCOS (Aventura y Salud) */
-    /* En lugar de ser columnas flacas, ahora ocuparán el ancho total una bajo otra */
+    /* --- TU MENÚ ORIGINAL (SIN CAMBIOS) --- */
+    nav ul {
+        display: block; 
+        text-align: center;
+        padding: 0;
+    }
+    nav ul li {
+        display: block; 
+        margin: 10px 0;
+    }
+    nav ul li a {
+        font-size: 18px; /* El tamaño que tenías */
+        display: block;
+    }
+
+    /* --- LOS ARREGLOS QUE PEDISTE --- */
+
+    /* 1. Cuadros blancos (Aventura y Salud) - Ahora se ven bien y anchos */
     .contenedor-aventura, .seccion-salud, div[style*="background-color:white"], .caja-blanca { 
-        width: 92% !important; /* No toca los filos del celular */
+        width: 90% !important; 
         display: block !important;
-        margin: 15px auto !important;
+        margin: 20px auto !important; /* Centrados y con espacio */
         padding: 20px !important;
         float: none !important;
         box-sizing: border-box !important;
-        border-radius: 15px; /* Bordes suaves para que se vea más moderno */
     }
 
-    /* 2. ARREGLO DE IMÁGENES CORTADAS Y LARGAS */
-    /* Esto hará que las fotos se vean completas y con espacio a los lados */
+    /* 2. Fotos que no peguen a los filos y se vean completas */
     img {
-        max-width: 90% !important; /* Espacio para que no peguen al filo */
-        height: auto !important; /* Evita que se estiren feo */
-        margin: 15px auto !important;
+        max-width: 85% !important; /* Margen a los lados */
+        height: auto !important;
+        margin: 20px auto !important;
         display: block !important;
-        border-radius: 8px;
     }
 
-    /* 3. ARREGLO DE TEXTOS LARGOS (Párrafos bonitos) */
-    p, .texto-descripcion {
+    /* 3. Párrafos bonitos (Atractivos y Servicios) */
+    p {
         font-size: 16px !important;
-        line-height: 1.6 !important; /* Más espacio entre líneas para que no canse la vista */
-        text-align: justify !important; /* Se ve más ordenado como párrafo */
-        padding: 0 15px !important;
+        line-height: 1.5 !important;
+        text-align: justify !important;
+        padding: 0 20px !important; /* Para que el texto no toque el borde del cel */
     }
 
-    /* 4. ARREGLO DE "INFORMACIÓN PRÁCTICA" (Letra N cortada) */
+    /* 4. Títulos (Arregla la "N" cortada de Información Práctica) */
     h1, h2 {
-        font-size: 22px !important;
-        word-wrap: break-word !important; /* Si la palabra es muy larga, la baja */
+        font-size: 24px !important;
+        word-wrap: break-word !important;
         padding: 0 10px !important;
         text-align: center !important;
     }
 
-    /* 5. ARREGLO DE "SERVICIOS" (Imagen pequeña al lado del texto) */
-    /* Esto obliga a que la imagen se ponga ARRIBA y el texto ABAJO, bien centrado */
-    .fila-servicio, .contenedor-flex {
+    /* 5. Servicios (Imagen arriba, texto abajo bien formado) */
+    .fila-servicio {
         display: flex !important;
         flex-direction: column !important;
         align-items: center !important;
-    }
-
-    /* 6. EL MENÚ (Para que no se vea tan amontonado) */
-    nav ul {
-        padding: 10px 0 !important;
-    }
-    nav ul li a {
-        font-size: 15px !important;
-        padding: 10px !important;
     }
 }
 
