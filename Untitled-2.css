@@ -305,8 +305,8 @@ border-radius:10px;
 }
 .bienvenida {
   position: absolute;
-  top: 50%;
-  left: 50%;
+  top: 373px;
+  left: 543px;
   transform: translate(-50%, -50%);
   z-index: 100;
   text-align: center;
@@ -496,98 +496,5 @@ html {
   box-shadow: 0 10px 20px rgba(0,0,0,0.2) !important;
   border-color: #FFF !important;
 }
-}
-/* 1. REGLAS GENERALES (Para PC y Celular) */
-html, body {
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    overflow-x: hidden; 
-}
-img {
-    max-width: 100%;    
-    margin: auto;
-}
-@media (max-width: 768px) {
-    /* 1. FIJAR PANTALLA: Esto evita que la página se baile a los lados */
-    html, body {
-        overflow-x: hidden !important;
-        width: 100% !important;
-        margin: 0 !important;
-        padding: 0 !important;
-    }
 
-    /* 2. EL MENÚ NEGRO: Logo izquierda, lista derecha (como tu foto) */
-    nav {
-        display: flex !important;
-        flex-direction: row !important; 
-        justify-content: space-between !important;
-        align-items: center !important;
-        background-color: black !important;
-        padding: 10px 15px !important;
-        width: 95% !important; /* Un poco menos del 100 para que no pegue al borde */
-        margin: 10px auto !important;
-        border-radius: 15px !important;
-        box-sizing: border-box !important;
-    }
-
-    nav img {
-        width: 70px !important; /* Logo más pequeño para que deje espacio al texto */
-        height: auto !important;
-    }
-
-    nav ul {
-        display: block !important;
-        text-align: right !important;
-        padding: 0 !important;
-        margin: 0 !important;
-        list-style: none !important;
-    }
-
-    nav ul li {
-        margin: 2px 0 !important;
-    }
-
-    nav ul li a {
-        color: white !important;
-        font-size: 11px !important; /* Letra pequeña para que NO empuje la pantalla */
-        text-decoration: none !important;
-        white-space: nowrap !important;
-    }
-
-    /* 3. EL TEXTO "BIENVENIDO A": Recto y en una sola línea */
-    h1 {
-        font-size: 18px !important; /* Tamaño clave para que entre RECTO en el cel */
-        white-space: nowrap !important; /* Obliga a que no se baje la "A!" */
-        text-align: center !important;
-        width: 100% !important;
-        display: block !important;
-        margin: 15px 0 !important;
-        text-transform: uppercase;
-    }
-
-    /* 4. IMAGEN PRINCIPAL: Para que no se estire ni se vea mal */
-    img {
-        max-width: 100% !important;
-        height: auto !important;
-        display: block !important;
-        margin: auto !important;
-    }
-	/* Esto arregla los párrafos y textos para que se lean claritos */
-    p, h2, h3, .texto-informativo {
-        font-size: 16px !important; /* Tamaño cómodo para leer */
-        line-height: 1.5 !important; /* Espacio entre líneas para que no se vea amontonado */
-        text-align: center !important;
-        padding: 0 15px !important; /* Esto crea un espacio a los lados para que no choque con el borde */
-        width: 100% !important;
-        box-sizing: border-box !important;
-        overflow-wrap: break-word !important; /* Si hay una palabra muy larga, la rompe para que no se esconda */
-    }
-
-    /* Si tienes títulos azules como el de la foto, esto los ajusta */
-    h2 {
-        font-size: 20px !important;
-        margin-top: 25px !important;
-    }
-}
 </style>
